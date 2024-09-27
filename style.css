@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'roboto';
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.banner-container {
+  text-align: center;
+  background-image: url(Banner.jpeg);
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+@keyframes slideInLeft{
+  from {
+    transform: translateX(1500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.banner-container h2 {
+  padding-top: 15%;
+  font-size: 120px;
+  color: white;
+  animation: slideInLeft 1s ease-out 0.1s;
+}
+.album-cover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+  top: 600px;
+  height: 100%;
+  background-color: #ddd;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.album-image {
+  height: 400px;
+  width: 500px;
+  width: calc(33.33% - 20);
+  transition: transform 0.5s ease;
+  margin-left: 20px;
+}
+.album-image img {
+  border:5px solid white;
+}
+
+.album-title {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 140%);
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  padding: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.album-image:hover .album-title, .info-symbol{
+  opacity: 1;
+}
+.album-image:hover {
+  transform: scale(1.2);
+}

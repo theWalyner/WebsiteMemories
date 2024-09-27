@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mosStyle.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MOS</h1>
+    <div class="image-container" id="image-container"></div>
+
+    <div class="popup-image">
+      <span>&times;</span>
+      <img src="Pictures/Bookstore (1).jpeg">
+    </div>
+  </div>
+
+
+  <script>
+    const imageSources = Array.from({ length: 4 }, (_, i) => `MOSpicture/mos (${i + 1}).jpeg`);
+
+    const container = document.getElementById('image-container');
+
+    imageSources.forEach((src) => {
+        const imageDiv = document.createElement('div');
+        imageDiv.classList.add('image');
+
+        const imgElement = document.createElement('img');
+        imgElement.src = src;
+
+        imageDiv.appendChild(imgElement);
+        container.appendChild(imageDiv);
+    });
+
+    document.querySelectorAll('.image-container img').forEach(image => {
+    image.onclick = () => {
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+    };
+});
+
+document.querySelector('.popup-image').onclick = () => {
+    document.querySelector('.popup-image').style.display = 'none';
+};
+  </script>
+</body>
+</html>
