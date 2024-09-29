@@ -55,8 +55,7 @@
 
 .popup-image img {
   position: absolute;
-  width: 900px;
-  height: 800px;
+  width: 90vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
