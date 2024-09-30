@@ -20,13 +20,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   padding: 10px;
 }
 
 .image {
-  width: 800px;
-  height: 350px;
+  width: 450px;
+  height: 400px;
   border: 10px solid white;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   overflow: hidden;
@@ -55,13 +55,14 @@
 
 .popup-image img {
   position: absolute;
-  width: 95vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
   border: 10px solid white;
   border-radius: 5px;
+  max-width: 90vw;
+  max-height: 90vh;
 }
 .popup-image span {
   position: absolute;

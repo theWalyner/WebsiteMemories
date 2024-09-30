@@ -55,14 +55,14 @@
 
 .popup-image img {
   position: absolute;
-  width: 900px;
-  height: 800px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
   border: 10px solid white;
   border-radius: 5px;
+  max-width: 90vw;
+  max-height: 90vh;
 }
 .popup-image span {
   position: absolute;

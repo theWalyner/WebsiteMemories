@@ -1,39 +1,10 @@
 *{
-  margin: 0;
-  padding: 0;
   font-family: 'roboto';
+  margin: 0;
 }
 body {
-  width: 100%;
   overflow-x: hidden;
 }
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-.banner-container {
-  text-align: center;
-  background-image: url(Banner.jpeg);
-  background-size: cover;
-  background-position: center center;
-  height: 30vw;
-  width: 100vw;
-  top: 0;
-}
-
-@media (max-width: 425px) {
-  .banner-container {
-    height: 250px;
-    background-size: contain;
-    background-position: top center;
-  }
-}
-@media (max-width: 768px) {
-  .banner-container {
-    height: 400px;
-  }
-}
-
 @keyframes slideInLeft{
   from {
     transform: translateX(1500px);
@@ -44,29 +15,44 @@ img {
     opacity: 1;
   }
 }
-.banner-container h2 {
+.banner-container {
+  text-align: center;
+  background-image: url(Banner.jpeg);
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+}
+h2 {
   padding-top: 15%;
-  font-size: 50px;
-  text-wrap: wra;
+  font-size: 90px;
+  text-wrap: wrap;
   color: white;
   animation: slideInLeft 1s ease-out 0.1s;
 }
+
 .album-cover {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   top: 600px;
+  gap: 50px;
   width: 100vw;
   background-color: #ddd;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 .album-image {
-  height: 400px;
-  width: calc(33.33% - 20);
+  width: 30%;
   transition: transform 0.5s ease;
-  margin-left: 20px;
+}
+
+@media (max-width: 480px){
+  .album-image {
+    width: 90vw;
+  }
 }
 .album-image img {
   width: 100%;
@@ -78,7 +64,7 @@ img {
   display: block;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 140%);
+  transform: translate(-50%, 170%);
   color: rgb(255, 255, 255);
   font-size: 50px;
   padding: 10px;
@@ -91,4 +77,22 @@ img {
 }
 .album-image:hover {
   transform: scale(1.2);
+}
+@media (max-width: 480px) {
+  .banner-container {
+    width: 100vw;
+    height: 300px;
+  }
+  h2 {
+    font-size: 35px;
+    padding-top: 18%;
+    color: rgb(255, 255, 255);
+    text-wrap: wrap;
+    animation: slideInLeft 1s ease-out 0.1s;
+  }
+  .album-title {
+    font-size: 20px;
+    white-space: normal;
+    transform: translate(-50%, 110%);
+} 
 }
