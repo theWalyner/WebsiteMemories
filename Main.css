@@ -15,23 +15,12 @@ body {
     opacity: 1;
   }
 }
-.banner-container {
-  text-align: center;
-  background-image: url(Banner.jpeg);
-  background-size: cover;
-  background-position: center center;
-  width: 100vw;
-  height: 60vh;
-  object-fit: cover;
-}
-h2 {
+.banner-container h2 {
   padding-top: 15%;
-  font-size: 90px;
-  text-wrap: wrap;
+  font-size: 120px;
   color: white;
   animation: slideInLeft 1s ease-out 0.1s;
 }
-
 .album-cover {
   display: flex;
   flex-direction: row;
@@ -72,27 +61,17 @@ h2 {
   opacity: 0;
   transition: opacity 0.5s;
 }
+
+@media (max-width: 425px) {
+  .album-title {
+    font-size: 20px;
+    white-space: normal;
+    transform: translate(-50%, 110%);
+  }
+}
 .album-image:hover .album-title, .info-symbol{
   opacity: 1;
 }
 .album-image:hover {
   transform: scale(1.2);
-}
-@media (max-width: 480px) {
-  .banner-container {
-    width: 100vw;
-    height: 300px;
-  }
-  h2 {
-    font-size: 35px;
-    padding-top: 18%;
-    color: rgb(255, 255, 255);
-    text-wrap: wrap;
-    animation: slideInLeft 1s ease-out 0.1s;
-  }
-  .album-title {
-    font-size: 20px;
-    white-space: normal;
-    transform: translate(-50%, 110%);
-} 
 }

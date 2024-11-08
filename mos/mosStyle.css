@@ -55,10 +55,12 @@
 
 .popup-image img {
   position: absolute;
+  width: 1200px;
+  height: 500px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  object-fit: cover;
+  object-fit: contain;
   border: 10px solid white;
   border-radius: 5px;
   max-width: 90vw;
