@@ -27,7 +27,7 @@ body {
 
 .banner-container h2 {
   padding-top: 15%;
-  font-size: 120px;
+  font-size: 5vw;
   color: white;
   animation: slideInLeft 1s ease-out 0.1s;
 }
@@ -41,10 +41,11 @@ body {
   width: 100vw;
   background-color: #ddd;
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 .album-image {
   width: 30%;
+  max-height: 80%;
   transition: transform 0.5s ease;
 }
 
@@ -58,9 +59,9 @@ body {
   display: block;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 170%);
+  transform: translate(-50%, 150%);
   color: rgb(255, 255, 255);
-  font-size: 50px;
+  font-size: 3vw;
   padding: 10px;
   white-space: nowrap;
   opacity: 0;
